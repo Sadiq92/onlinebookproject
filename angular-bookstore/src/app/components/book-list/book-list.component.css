@@ -1,8 +1,7 @@
 table, th, td {
   border: 1px solid black;
-  font-size: 15px;
-}
+  }
 
 th, td {
-  padding: 10px;
+  padding: 12px;
 }
