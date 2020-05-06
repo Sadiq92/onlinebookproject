@@ -23,8 +23,8 @@ import lombok.ToString;
 @ToString
 public class BookCategory {
 	@Id
-	//@GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "id_Sequence")
-	//@SequenceGenerator(name = "id_Sequence", sequenceName = "tbl_category_seq")
+	//@GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "c_id_Sequence")
+	//@SequenceGenerator(name = "c_id_Sequence", sequenceName = "tbl_category_seq")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	

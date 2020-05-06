@@ -33,13 +33,13 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
 		</dependency> -->
-		<!-- <dependency>
+		 <!-- <dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>ojdbc</artifactId>
 			<version>6</version>
 			<scope>system</scope>
 			<systemPath>d:/Software/ojdbc6.jar</systemPath>
-		</dependency> -->
+		</dependency> --> 
 		<dependency>
     <groupId>com.h2database</groupId>
     <artifactId>h2</artifactId>
