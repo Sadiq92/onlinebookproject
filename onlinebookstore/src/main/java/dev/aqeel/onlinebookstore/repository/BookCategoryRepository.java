@@ -1,14 +1,11 @@
 package dev.aqeel.onlinebookstore.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import dev.aqeel.onlinebookstore.entity.BookCategory;
 
-//@Repository
-
-
+@RepositoryRestResource(collectionResourceRel="bookCategory", path="book-category")
 public interface BookCategoryRepository extends JpaRepository<BookCategory, Long> {
 
 }

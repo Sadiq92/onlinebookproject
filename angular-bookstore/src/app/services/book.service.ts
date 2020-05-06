@@ -1,3 +1,4 @@
+import { BookCategory } from './../common/book-category';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -10,6 +11,7 @@ import { Book } from '../common/book';
 export class BookService {
 
   private baseUrl = "http://localhost:8686/api/v1/books/";
+  private categoryUrl = "http://localhost:8686/api/v1/book-category";
 
   constructor(private httpClient : HttpClient) { }
 
@@ -22,6 +24,15 @@ export class BookService {
       );    
 
   }
+
+  getBookCategories(): Observable<BookCategory[]>{
+    //const searchUrl = `${this.baseUrl}/search/categoryid?id=${theCategoryId}`;
+    return this.httpClient.get<GetResponseBookCategory>(this.categoryUrl).pipe(
+      map(response => response._embedded.bookCategory)
+      );    
+
+
+  }
 }
 
 
@@ -31,3 +42,8 @@ export class BookService {
     }
 }
 
+interface GetResponseBookCategory{
+  _embedded : {
+    bookCategory : BookCategory[];
+  }
+}
