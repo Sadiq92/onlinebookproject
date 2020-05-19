@@ -10,7 +10,7 @@ public class OnlineBookStoreApplication {
 
 	public static void main(String[] args) {
 		
-		
+		//This is spring boot main method
 		SpringApplication.run(OnlineBookStoreApplication.class, args);
 	}
 
